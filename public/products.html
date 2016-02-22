@@ -4,12 +4,9 @@
 <title>Shop Online</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link href="style/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{{URL::to('js/jquery-1.9.0.min.js')}}"></script>
-<script type="text/javascript" src="{{URL::to('js/sites.js')}}"></script>
 <!--[if IE]>
 <link href="style/style-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
 <center>
@@ -38,7 +35,7 @@
   <div class="hot-search">
     <div class="hot-search-text"> Hot Searches: Apple iPod Nano, Hugo Boss Clothing, HD DVD Player, DSLR Camera, Toshiba 32&quot; LCD TV, Unsecured Loans, Excersise Machines..</div>
   </div>
-  <div class="body-wrapper">
+  <div class="body-wrapper single-product">
     <div class="body-right">
       <div class="body-right-box1">
         <div class="right-topic-title"> Favourite Items</div>
@@ -92,12 +89,7 @@
     </div>
     <div class="divider1"> &nbsp;</div>
     <div class="body-middle">
-      <div class="body-middle-box1">
-        <div class="lcd-title"> New Year Sale!<br />
-          Great HDTV Deals! <br />
-          <br />
-          <img src="images/findout.jpg" alt="" /></div>
-      </div>
+      
       <div class="separator-middle"> &nbsp;</div>
       <div class="body-middle-box2">
         <div class="sale-title"> New Year Sale!</div>
@@ -106,16 +98,10 @@
           <img src="images/findout.jpg" alt="" /></div>
       </div>
       <div class="separator-middle"> &nbsp;</div>
-      <div class="body-middle-box3">
-         @yield("content")
-      </div>
-    </div>
-    <div class="divider2"> &nbsp;</div>
-    <div class="body-left">
-    <div class="left-main-title"> Shopping Categories</div>
-      @yield("sidebar") 
       
     </div>
+    
+    
   </div>
   <div class="separator-main"> &nbsp;</div>
   <div class="footer">

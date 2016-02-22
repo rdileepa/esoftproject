@@ -12,7 +12,25 @@
 */
 
 Route::get('/', 'ItemsController@index');
+
+Route::get('/products/{id}','ItemsController@show');
+
+Route::get('/addcart/{id}','CokieController@add');
+
+Route::get('/showcategory', function(){
+	$cat_id=Input::get('cat_id');
+	$items = DB::table('items')
+                ->join('categories', 'items.cat_id', '=', 'categories.cat_id')
+                ->join('images', 'items.item_id', '=', 'images.item_id')
+                //->select('items.item_name','items.item_price', 'images.image')
+                ->where('images.is_default', '=', 1) 
+                ->where('categories.cat_id', '=', $cat_id) 
+                ->orderBy('items.item_id', 'desc')->take(3)->get();
+
+    
+   return Response::json($items);
+
+});
 //Route::get('/showcategory/{id}', 'ItemsController@showcategory');
-Route::post('/ajax/showcategory', array(
-  'uses'  =>  'ItemsController@showcategory'
-));
+//Route::get('/ajax/showcategory', function(){
+

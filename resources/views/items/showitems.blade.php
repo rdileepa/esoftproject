@@ -3,13 +3,14 @@
 <head>
 <title>Shop Online</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="style/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{{URL::to('js/jquery-1.9.0.min.js')}}"></script>
+<link href="{{URL::to('style/style.css')}}" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{{URL::to('js/sites.js')}}"></script>
+
+
+
 <!--[if IE]>
 <link href="style/style-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
 <center>
@@ -32,54 +33,59 @@
       <input type="text" size="40" />
       &nbsp;&nbsp;</div>
     <div style="float:left; margin-left:5px; margin-top:10px;">
-      <input type="image" src="images/search.jpg" />
+      <input type="image" src="{{URL::to('images/search.jpg')}}" />
     </div>
   </div>
   <div class="hot-search">
     <div class="hot-search-text"> Hot Searches: Apple iPod Nano, Hugo Boss Clothing, HD DVD Player, DSLR Camera, Toshiba 32&quot; LCD TV, Unsecured Loans, Excersise Machines..</div>
   </div>
-  <div class="body-wrapper">
+  <div class="body-wrapper single-product">
+
+
+
+    
+
     <div class="body-right">
       <div class="body-right-box1">
         <div class="right-topic-title"> Favourite Items</div>
         <br />
-        <div style="width:170px;padding-left:10px;"> <img src="images/mobile.jpg" style="float:left; margin-right: 0px;" alt="" />
+        <div style="width:170px;padding-left:10px;"> <img src="{{URL::to('images/mobile.jpg')}}" style="float:left; margin-right: 0px;" alt="" />
           <div style="width:140px; text-align:right; padding-left:3px;">
             <div class="product-title"> Nokia 8800 Arte</div>
             <div class="product-price"> prices &nbsp;from &nbsp;&pound;749.99</div>
-            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="images/proceed.jpg" style="padding-top: 3px;" alt="" /></div>
+            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="{{URL::to('images/proceed.jpg')}}" style="padding-top: 3px;" alt="" /></div>
           </div>
         </div>
         <br />
-        <div style="width:170px;padding-left:10px;padding-top:3px;"> <img src="images/mobile.jpg" style="float:left; margin-right: 0px;" alt="" />
+        <div style="width:170px;padding-left:10px;padding-top:3px;"> <img src="{{URL::to('images/mobile.jpg')}}" style="float:left; margin-right: 0px;" alt="" />
           <div style="width:140px; text-align:right; padding-left:3px;">
             <div class="product-title"> Nokia 8800 Arte</div>
             <div class="product-price"> prices &nbsp;from &nbsp;&pound;749.99</div>
-            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="images/proceed.jpg" style="padding-top: 3px;" alt="" /></div>
+            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="{{URL::to('images/proceed.jpg')}}" style="padding-top: 3px;" alt="" /></div>
           </div>
         </div>
         <br />
-        <div style="width:170px;padding-left:10px;padding-top:1px;"> <img src="images/mobile.jpg" style="float:left; margin-right: 0px;" alt="" />
+        <div style="width:170px;padding-left:10px;padding-top:1px;"> <img src="{{URL::to('images/mobile.jpg')}}" style="float:left; margin-right: 0px;" alt="" />
           <div style="width:140px; text-align:right; padding-left:3px;">
             <div class="product-title"> Nokia 8800 Arte</div>
             <div class="product-price"> prices &nbsp;from &nbsp;&pound;749.99</div>
-            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="images/proceed.jpg" style="padding-top: 3px;" alt="" /></div>
+            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="{{URL::to('images/proceed.jpg')}}" style="padding-top: 3px;" alt="" /></div>
           </div>
         </div>
         <br />
-        <div style="width:170px;padding-left:10px;padding-top:2px;"> <img src="images/mobile.jpg" style="float:left; margin-right: 0px;" alt="" />
+        <div style="width:170px;padding-left:10px;padding-top:2px;"> <img src="{{URL::to('images/mobile.jpg')}}" style="float:left; margin-right: 0px;" alt="" />
           <div style="width:140px; text-align:right; padding-left:3px;">
             <div class="product-title"> Nokia 8800 Arte</div>
             <div class="product-price"> prices &nbsp;from &nbsp;&pound;749.99</div>
-            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="images/proceed.jpg" style="padding-top: 3px;" alt="" /></div>
+            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="{{URL::to('images/proceed.jpg')}}" style="padding-top: 3px;" alt="" /></div>
           </div>
         </div>
         <br />
-        <div style="width:170px;padding-left:10px;padding-top:2px;"> <img src="images/mobile.jpg" style="float:left; margin-right: 0px;" alt="" />
+        <div style="width:170px;padding-left:10px;padding-top:2px;"> <img src="{{URL::to('images/mobile.jpg')}}" style="float:left; margin-right: 0px;" alt="" />
           <div style="width:140px; text-align:right; padding-left:3px;">
             <div class="product-title"> Nokia 8800 Arte</div>
             <div class="product-price"> prices &nbsp;from &nbsp;&pound;749.99</div>
-            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="images/proceed.jpg" style="padding-top: 3px;" alt="" /></div>
+            <div class="product-compare"> <u>Compare..</u>&nbsp;<img src="{{URL::to('images/proceed.jpg')}}" style="padding-top: 3px;" alt="" /></div>
           </div>
         </div>
       </div>
@@ -92,30 +98,20 @@
     </div>
     <div class="divider1"> &nbsp;</div>
     <div class="body-middle">
-      <div class="body-middle-box1">
-        <div class="lcd-title"> New Year Sale!<br />
-          Great HDTV Deals! <br />
-          <br />
-          <img src="images/findout.jpg" alt="" /></div>
-      </div>
+      
       <div class="separator-middle"> &nbsp;</div>
       <div class="body-middle-box2">
-        <div class="sale-title"> New Year Sale!</div>
-        <div class="sale-desc"> Lorem ipsum dolor sit amet, consectetdipisicing elit, sed do eiusmod tempor incididabore et dolore magna aliqua. Ut enim ad mieniauis nostrud exercitation ullamco laboris nisiliquip ex ea. Lorem ipsum dolor sit amet, consecur adipisicing elit, sed do eiusmod tempcidi <br />
+        <div class="sale-title"> {{$items[0]->item_name}}</div>
+        <img src="{{$items[0]->image}}" alt="" />
+        <div class="sale-desc"> {{$items[0]->item_description}} <br />
           <br />
-          <img src="images/findout.jpg" alt="" /></div>
+         <a href="/addcart/{{$items[0]->item_id}}"> <img src="{{URL::to('images/buy_button.png')}}" alt="" /></a></div>
       </div>
       <div class="separator-middle"> &nbsp;</div>
-      <div class="body-middle-box3">
-         @yield("content")
-      </div>
-    </div>
-    <div class="divider2"> &nbsp;</div>
-    <div class="body-left">
-    <div class="left-main-title"> Shopping Categories</div>
-      @yield("sidebar") 
       
     </div>
+    
+    
   </div>
   <div class="separator-main"> &nbsp;</div>
   <div class="footer">
@@ -125,5 +121,6 @@
     </div>
   </div>
 </center>
+
 </body>
 </html>

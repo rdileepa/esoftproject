@@ -367,6 +367,7 @@ background:#007CAA;
 float: right;
 margin-right: 20px;
 padding-top:25px;
+width: 100px;
 }
 .gallery-product2
 {
@@ -453,3 +454,9 @@ width:140px; text-align:right; padding-left:3px;
 }
 
 .sidebar-content a{text-decoration: none;}
+
+.single-product .body-middle{float: left !important;}
+
+ .active{
+        z-index:99;
+    }

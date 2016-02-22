@@ -16,12 +16,14 @@
 
 <div class="gallery-name1" style="margin-left:15px;padding-top:7px;"> </div>
         <div style="clear:both;">
+        <div id="ajax-cat">
         @foreach($items as $item)
-          <div class="gallery-product3"> <img src="{{$item->image}}" alt="" />
+          <a href="/products/{{$item->item_id}}"><div class="gallery-product3"> <img src="{{$item->image}}" alt="" />
             <div class="gallery-name">{{$item->item_name}}</div>
             <div class="gallery-price">Rs.{{$item->item_price}}</div>
-            <img src="images/goshop.jpg" alt="" /></div>
+            <img src="images/goshop.jpg" alt="" />
+            </div></a>
         @endforeach
-         
+        </div> 
         </div>
 @endsection

@@ -24,6 +24,7 @@ class ItemsController extends Controller
                 ->join('images', 'items.item_id', '=', 'images.item_id')
                 //->select('items.item_name','items.item_price', 'images.image')
                 ->where('images.is_default', '=', 1)
+                ->where('items.cat_id', '=', 1)
                 ->orderBy('items.item_id', 'desc')->take(3)->get();
        
        // print_r($items);   
@@ -36,8 +37,17 @@ class ItemsController extends Controller
 
     public function showcategory($id){
 
-        echo $id;
-        die;
+       /* $items = DB::table('items')
+                ->join('categories', 'items.cat_id', '=', 'categories.cat_id_id')
+                ->join('images', 'items.item_id', '=', 'images.item_id')
+                //->select('items.item_name','items.item_price', 'images.image')
+                ->where('images.is_default', '=', 1)
+                ->orderBy('items.item_id', 'desc')->take(3)->get();
+                */
+
+        return Response::json($id);
+        
+
     }
     /**
      * Show the form for creating a new resource.
@@ -67,8 +77,17 @@ class ItemsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+
     {
-        //
+       $items = DB::table('items')
+                ->join('images', 'items.item_id', '=', 'images.item_id')
+                //->select('items.item_name','items.item_price', 'images.image')
+                ->where('images.is_default', '=', 1) 
+                ->where('items.item_id', '=', $id) 
+                ->orderBy('items.item_id', 'desc')->get();
+
+       // print_r(compact($items));
+        return view('items.showitems')->with("items",$items);
     }
 
     /**
