@@ -104,42 +104,14 @@
       </div>
       <div class="separator-middle"> &nbsp;</div>
       <div class="body-middle-box3">
-        <div class="gallery-name" style="margin-left:15px;padding-top:7px;"> New Stuff&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Sellers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hot Deals</div>
-        <div style="clear:both;">
-          <div class="gallery-product3"> <img src="images/ipod.jpg" alt="" />
-            <div class="gallery-name">iPod Classic!</div>
-            <div class="gallery-price">From &pound;129.99</div>
-            <img src="images/goshop.jpg" alt="" /></div>
-          <div class="gallery-product2"> <img src="images/ipod.jpg" alt="" />
-            <div class="gallery-name">iPod Classic!</div>
-            <div class="gallery-price">From &pound;129.99</div>
-            <img src="images/goshop.jpg" /></div>
-          <div class="gallery-product1"> <img src="images/ipod.jpg" alt="" />
-            <div class="gallery-name">iPod Classic!</div>
-            <div class="gallery-price">From &pound;129.99</div>
-            <img src="images/goshop.jpg" alt="" /></div>
-        </div>
+         @yield("content")
       </div>
     </div>
     <div class="divider2"> &nbsp;</div>
     <div class="body-left">
-      <div class="left-main-title"> Shopping Categories</div>
-      <div class="left-topic-title"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title" style="padding-top:25px;"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title" style="padding-top:28px;"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title" style="padding-top:30px;"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title" style="padding-top:30px;"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title" style="padding-top:30px;"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
-      <div class="left-topic-title" style="padding-top:30px;"> Books, DVD&#8217;s &amp; Music</div>
-      <div class="left-topic-desc"> CD&#8217;s, Magazine Subscriptions, 300: The Movie, &amp; more..</div>
+    <div class="left-main-title"> Shopping Categories</div>
+      @yield("sidebar") 
+      
     </div>
   </div>
   <div class="separator-main"> &nbsp;</div>

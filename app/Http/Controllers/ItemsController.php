@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Model\Item;
+use App\Http\Model\Category;
+use DB;
 class ItemsController extends Controller
 {
     /**
@@ -15,9 +17,28 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        return view('items.index');
+
+       $categories = Category::all();
+      //print_r($categories);
+       $items = DB::table('items')
+                ->join('images', 'items.item_id', '=', 'images.item_id')
+                //->select('items.item_name','items.item_price', 'images.image')
+                ->where('images.is_default', '=', 1)
+                ->orderBy('items.item_id', 'desc')->take(3)->get();
+       
+       // print_r($items);   
+
+       return view('items.index',compact('categories','items'));
+       //return view('items.index')->with("items",$items);
     }
 
+
+
+    public function showcategory($id){
+
+        echo $id;
+        die;
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'ItemsController@index');
+//Route::get('/showcategory/{id}', 'ItemsController@showcategory');
+Route::post('/ajax/showcategory', array(
+  'uses'  =>  'ItemsController@showcategory'
+));

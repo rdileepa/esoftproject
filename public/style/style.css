@@ -206,7 +206,7 @@ body
 {
   width: 389px;
   height: 286px;
-  background-image: url(../images/gallery.jpg);
+ 
   background-repeat: no-repeat;
 }
 
@@ -451,3 +451,5 @@ a.nav2:active {color: blue; }
 .frame{
 width:140px; text-align:right; padding-left:3px;
 }
+
+.sidebar-content a{text-decoration: none;}
