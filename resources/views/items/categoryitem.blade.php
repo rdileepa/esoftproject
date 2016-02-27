@@ -11,19 +11,7 @@
      
 @endsection
 
-@section("banner1")
-  <div class="lcd-title"> New Year Sale!<br />
-          Great HDTV Deals! <br />
-          <br />
-          <img src="{{URL::to('images/findout.jpg')}}" alt="" /></div>
-@endsection
 
-@section("banner2")
-  <div class="sale-title"> New Year Sale!</div>
-        <div class="sale-desc"> Lorem ipsum dolor sit amet, consectetdipisicing elit, sed do eiusmod tempor incididabore et dolore magna aliqua. Ut enim ad mieniauis nostrud exercitation ullamco laboris nisiliquip ex ea. Lorem ipsum dolor sit amet, consecur adipisicing elit, sed do eiusmod tempcidi <br />
-          <br />
-          <img src="images/findout.jpg" alt="" /></div>
-@endsection
 
 @section("content")
 

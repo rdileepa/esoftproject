@@ -28,10 +28,49 @@ $(document).ready(function(){
 	});
 	});
 
+ 
+
+
+ 	$(document).on('click','.category',function(e)
+	{
+		var item = $(this).data('itemid');
+	//	alert(item);
 
 
 
-	$('.sidebar-content').on('click','a',function(e){
+		_url=$(this).attr('href');
+	//	alert(_url);
+
+		var _token=$(this).attr('value');
+		//alert(_token);
+
+		e.preventDefault();
+
+		jQuery.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': _token
+			}
+		});
+
+		$.ajax(
+		{
+			method:"POST",
+			url:_url,
+			data:item,
+			type:"html",
+			success:function(html)
+			{
+
+			$('#center').html(html);
+
+
+//				
+			}
+		});
+	});
+
+
+	/*$('.sidebar-content').on('click','a',function(e){
 		e.preventDefault();
 		var url = $(this).attr('href');
 		var last = url.substring(url.lastIndexOf("/") + 1, url.length);
@@ -57,11 +96,11 @@ $(document).ready(function(){
 	       );
       	});
 
-		});
+		});*/
 
 
 	
-	});
+	
 
 
 

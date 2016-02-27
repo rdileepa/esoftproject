@@ -7,7 +7,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Model\Item;
 use App\Http\Model\Category;
-use DB;
+use Cookie;
+
 class ItemsController extends Controller
 {
     /**
@@ -20,18 +21,40 @@ class ItemsController extends Controller
 
        $categories = Category::all();
       //print_r($categories);
-       $items = DB::table('items')
+       $items = Item::select('items.item_name','items.item_price', 'images.image','items.item_id')
                 ->join('images', 'items.item_id', '=', 'images.item_id')
-                //->select('items.item_name','items.item_price', 'images.image')
                 ->where('images.is_default', '=', 1)
                 ->where('items.cat_id', '=', 1)
                 ->orderBy('items.item_id', 'desc')->take(3)->get();
        
        // print_r($items);   
 
-       return view('items.index',compact('categories','items'));
-       //return view('items.index')->with("items",$items);
+       return view('items.index')->with([
+                                        "categories"=>$categories,
+                                        'items' =>$items]);
+     
     }
+
+    public function categoryitem()
+    {
+
+       $categories = Category::all();
+      //print_r($categories);
+       $items = Item::select('items.item_name','items.item_price', 'images.image','items.item_id')
+                ->join('images', 'items.item_id', '=', 'images.item_id')
+                ->where('images.is_default', '=', 1)
+                ->where('items.cat_id', '=', 1)
+                ->orderBy('items.item_id', 'desc')->get();
+       
+       // print_r($items);   
+
+       return view('items.categoryitem')->with([
+                                        "categories"=>$categories,
+                                        'items' =>$items]);
+     
+    }
+
+   
 
 
 
@@ -79,7 +102,8 @@ class ItemsController extends Controller
     public function show($id)
 
     {
-       $items = DB::table('items')
+       $categories = Category::all();
+       $items = Item::select('items.item_name','items.item_price', 'images.image','items.item_id','items.item_description')
                 ->join('images', 'items.item_id', '=', 'images.item_id')
                 //->select('items.item_name','items.item_price', 'images.image')
                 ->where('images.is_default', '=', 1) 
@@ -87,7 +111,9 @@ class ItemsController extends Controller
                 ->orderBy('items.item_id', 'desc')->get();
 
        // print_r(compact($items));
-        return view('items.showitems')->with("items",$items);
+        return view('items.showitems')->with([
+                                        "categories"=>$categories,
+                                        'items' =>$items]);
     }
 
     /**

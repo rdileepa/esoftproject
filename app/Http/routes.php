@@ -15,9 +15,13 @@ Route::get('/', 'ItemsController@index');
 
 Route::get('/products/{id}','ItemsController@show');
 
-Route::get('/addcart/{id}','CokieController@add');
+Route::get('/addcart/{id}','ItemsController@addCookie');
 
-Route::get('/showcategory', function(){
+Route::post('/showcategory/{id}','CategoryController@show');
+
+Route::get('/categories','ItemsController@categoryitem');
+
+/*Route::get('/showcategory', function(){
 	$cat_id=Input::get('cat_id');
 	$items = DB::table('items')
                 ->join('categories', 'items.cat_id', '=', 'categories.cat_id')
@@ -30,7 +34,7 @@ Route::get('/showcategory', function(){
     
    return Response::json($items);
 
-});
+});*/
 //Route::get('/showcategory/{id}', 'ItemsController@showcategory');
 //Route::get('/ajax/showcategory', function(){
 
